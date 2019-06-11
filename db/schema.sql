@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS setGoals_DB;
+CREATE DATABASE setGoals_DB;
+USE setGoals_DB;

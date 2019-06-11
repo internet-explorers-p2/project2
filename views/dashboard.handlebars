@@ -1,0 +1,88 @@
+<div class="container-fluid">
+    {{!-- Welcome row --}}
+    <div class="row">
+        <h1>Welcome </h1> <span></span>
+        <h2>{{username}}</h2>
+    </div>
+    {{!-- /Welcome row --}}
+
+    {{!-- Content row --}}
+    <div class="row">
+
+    {{!-- ADD A GOAL BUTTON --}}
+
+<div class="add-new-goal">
+<button type="button" id="add-goal" class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add a goal</button>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add a goal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="goal-name" class="col-form-label">Goal Name:</label>
+            <input type="text" class="form-control" id="goal-name">
+          </div>
+          <div class="form-group">
+            <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                <label for="start-date" class="col-form-label">Start date </label>
+                <span class="input-group-text" id="start-date"><i class="far fa-calendar-alt"></i></span>
+                </div>
+                <input type="date" class="form-control" placeholder="Start Date" aria-label="date" aria-describedby="addon-wrapping">
+            </div>
+             <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                <label for="end-date" class="col-form-label">End date </label>
+                <span class="input-group-text" id="end-date"><i class="far fa-calendar-alt"></i></span>
+                </div>
+                <input type="date" class="form-control" placeholder="Start Date" aria-label="date" aria-describedby="addon-wrapping">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        {{!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> --}}
+        <button type="button" class="btn btn-primary" id="form-save-goal-button">save</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+        {{!-- Goals column --}}
+        <div class="col-lg-6">
+            <div class="accordion" id="accordionExample">
+                {{#each GOAL_NAME_TABLE}}
+                {{> goal-accordion}}
+                {{/each}}
+            </div>
+        </div>
+        {{!-- /Goals column --}}
+
+        {{!-- Challenge of the day --}}
+        <div class="col-lg-4">
+            <div class="row justify-content-center" id="challenge-area">
+                <h2 id="challenge-title">Challenge of the day</h2>
+                <div class="row" id="challenge-info">
+                    <h4>{{challengeOfTheDay}}</h4>
+                </div>
+
+            </div>
+
+        </div>
+        {{!-- /Challenge of the day --}}
+
+    </div>
+    {{!-- /Content row --}}
+
+    {{!-- /Container div --}}
+</div>
