@@ -1,3 +1,272 @@
 .list-group-item {
   line-height: 2.5;
 }
+/* INDEX HOME PAGE */
+#first-background {
+  background-image: url("../image/backgroundone.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#third-background {
+  background-image: url("../image/gradient.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 600px;
+  box-shadow: 0px 0px 5px 1px;
+}
+
+.one {
+  margin-right: 80px;
+  margin-top: 80px;
+}
+
+.two {
+  margin-left: 50px;
+  margin-top: 80px;
+}
+
+.three {
+  margin-left: 145px;
+  margin-top: 80px;
+}
+
+.four {
+  margin-left: 120px;
+  margin-top: 80px;
+}
+
+#logo {
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+
+.prices {
+  height: 200px;
+}
+
+#second-background {
+  box-shadow: 0px 0px 2px 0px;
+  height: 100%;
+  width: 100%;
+  background-image: url(../image);
+  margin: auto;
+}
+
+#basic-account-info {
+  padding: 2%;
+  width: 900px;
+  margin-top: 5%;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.075), -5px 0px 20px 0 rgba(0, 0, 0, 0.027);
+  height: 70%;
+  border-radius: 20px 0 0 20px;
+}
+
+#premium-account-area {
+  box-shadow: 0 3px 15px 1px;
+  /* z-index: 1; */
+  padding: 2%;
+  margin-top: 5%;
+  box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.11);
+  height: 70%;
+}
+
+#deluxe-account-area {
+  padding: 2%;
+  width: 350px;
+  margin-top: 5%;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.075), -5px 0px 20px 0 rgba(0, 0, 0, 0.027);
+  height: 70%;
+  border-radius: 20px;
+  border-radius: 0 20px 20px 0;
+}
+
+.price-heading {
+  margin: auto;
+  margin-bottom: 15%;
+  background-color: rgba(0, 0, 0, 0.082);
+  padding: none;
+}
+
+#basic {
+  font-size: 70px;
+  font-weight: bold;
+  position: absolute;
+}
+
+#basic-account {
+  position: relative;
+  padding-top: 32%;
+}
+
+#premium {
+  font-size: 70px;
+  font-weight: bold;
+  position: absolute;
+}
+
+#premium-account {
+  position: relative;
+}
+
+#premium-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  margin-left: 35%;
+  margin-top: 9%;
+  font-size: 20px;
+}
+
+#deluxe {
+  font-size: 70px;
+  font-weight: bold;
+  position: absolute;
+}
+
+#deluxe-account {
+  position: relative;
+  margin-top: 10%;
+}
+
+#deluxe-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  margin-left: 48%;
+  margin-top: 12%;
+  font-size: 20px;
+}
+
+.deadline {
+  margin: 10px;
+  margin-right: 8px;
+}
+/* END OF INDEX */
+
+
+/* DASHBOARD.HANDLEBARS */
+
+/* NAV */
+#nav-dash {
+  background: rgb(39, 39, 39);
+  color: white;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.24), -5px 0px 20px 5px rgba(0, 0, 0, 0.267);
+}
+#nav-item{
+  margin: 1px 10px auto auto;
+}
+
+#nav-logo {
+  max-width: 8%;
+  margin: 2px auto 2px 5px;
+}
+
+
+
+
+/* END OF NAV */
+
+/* WELCOME NAME OF USER */
+#welcome-sign {
+  font-size: 20px;
+  margin: 25px 8px 20px 60px;
+}
+
+#username-sign {
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+
+/* ADD NEW GOAL BUTTON */
+#add-goal-button {
+  margin: 5px auto 20px 60px;
+}
+
+/* CHALLENGE OF THE DAY */
+#challenge-title {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#challenge-area {
+  /* background: rgb(217,222,222); */
+  background: linear-gradient(261deg, rgba(229, 231, 231) 0%, rgba(252, 254, 252, 1) 50%, rgb(229, 231, 231) 100%);
+  width: 80%;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.582), -5px 0px 20px 5px rgba(0, 0, 0, 0.062);
+  margin: -25px 15px 15px auto;
+}
+
+#challenge-info {
+  margin-top: -5px;
+}
+
+/* CHECKBOX STYLE: from challenge of the day  */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: white;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: white;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: teal;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* END OF CHECKBOX STYLE */
