@@ -3,13 +3,13 @@
 }
 /* INDEX HOME PAGE */
 #first-background {
-  background-image: url("../image/backgroundone.png");
+  background-image: url("../images/backgroundone.png");
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 #third-background {
-  background-image: url("../image/gradient.png");
+  background-image: url("../images/gradient.png");
   background-size: 100%;
   background-repeat: no-repeat;
   height: 600px;
@@ -181,25 +181,36 @@
 #add-goal-button {
   margin: 5px auto 20px 60px;
 }
+/* Accordion */
+.question {
+  cursor: pointer;
+  color: red;
+}
 
 /* CHALLENGE OF THE DAY */
 #challenge-title {
   font-size: 35px;
   font-weight: bold;
 }
+hr{
+  width: 80%;
+  /* border: 15px none; */
+  border-width: 5px;
+ margin: -15px auto -10px auto !important;
+}
 
 #challenge-area {
   /* background: rgb(217,222,222); */
-  background: linear-gradient(261deg, rgba(229, 231, 231) 0%, rgba(252, 254, 252, 1) 50%, rgb(229, 231, 231) 100%);
+  background: white;
   width: 80%;
   height: 200px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.582), -5px 0px 20px 5px rgba(0, 0, 0, 0.062);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.062);
   margin: -25px 15px 15px auto;
 }
 
 #challenge-info {
-  margin-top: -5px;
+  margin-top: -25px;
 }
 
 /* CHECKBOX STYLE: from challenge of the day  */
@@ -232,7 +243,7 @@
   left: 0;
   height: 18px;
   width: 18px;
-  background-color: white;
+  background-color: rgb(146, 145, 145);
 }
 
 /* On mouse-over, add a grey background color */
@@ -270,3 +281,52 @@
   transform: rotate(45deg);
 }
 /* END OF CHECKBOX STYLE */
+
+
+
+/* FOOTER */
+footer{
+  display: inline-block;
+}
+#social-media-links{
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.fab {
+  padding: 2px;
+  border-radius: 8px;
+  font-size: 28px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 4px 10px;
+}
+.fab:hover {
+  opacity: 0.7;
+}
+.fa-github-square{
+  background: rgb(129, 1, 129);
+  color: white;
+}
+.fa-facebook-square {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter-square {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #ea4c89;
+  color: white;
+  /* margin-left: -2px; */
+}
+#copyright{
+  margin-left: 30%;
+}
+#about-terms{
+  float: right;
+  margin-right: 30px;
+}
