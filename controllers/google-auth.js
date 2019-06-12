@@ -2,7 +2,17 @@ var passport = require("passport")
 var GoogleStrategy = require("passport-google-oauth").OAuth2Strategy
 var User = require("../models/users")
 var db = require("../models")
-var newUser;
+
+passport.serializeUser((user,done) => {
+  done(null,user.id);
+})
+
+passport.deserializeUser((id,done) => {
+  db.User.findById(id).then((user) => {
+    done(null,user);
+  })
+  
+})
 
 // Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
@@ -20,7 +30,8 @@ passport.use(new GoogleStrategy({
       }
       }).then((currentUser) => {
       if(currentUser) {
-			console.log("CURRENT USER IS: " + currentUser)
+      console.log("CURRENT USER IS: " + profile.displayName)
+      done(null, currentUser)
       }else{
         var data = {
           name: profile.displayName,
@@ -34,17 +45,7 @@ passport.use(new GoogleStrategy({
             return done(null, newUser);
           }
         })
-          console.log("++++new user created:++++++ " + newUser)
+          console.log("++++new user created:++++++ " + profile.displayName)
 
       // }
     }})}))
-
-passport.serializeUser(function(user, done) {
-  done(null, user.id);
-});
-
-passport.deserializeUser(function(id, done) {
-  User.findById(id, function(err, user) {
-    done(err, user);
-  });
-});

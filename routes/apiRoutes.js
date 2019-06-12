@@ -41,7 +41,8 @@ require("../controllers/google-auth")
   // authentication logout
   router.get("/logout", (req, res) => {
     // passport stuff will go here
-    res.send("logging out");
+	req.logout();
+	res.redirect("/");
   })
 
   // authentication with google
@@ -51,7 +52,8 @@ require("../controllers/google-auth")
 
   //callback route for google to redirect to
   router.get("/google/redirect", passport.authenticate("google"),(req,res) => {
-    res.send("You reached the callback URI")
+	// res.send(req.user)
+	res.redirect("/dashboard/")
   })
 // }
 // ========= AUTHENTICATION ENDS HERE ===============

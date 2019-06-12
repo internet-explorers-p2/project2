@@ -5,6 +5,7 @@ var passport = require("passport")
 var PORT = process.env.PORT || 3000;
 var db = require("./models");
 var app = express();
+var cookieSession = require("cookie-session");
 // var Handlebars = require("handlebars");
 
 // app.use(express.static(__dirname + "public"));
@@ -18,15 +19,25 @@ app.use(express.json());
 app.use(passport.initialize())
 app.use(passport.session())
 
+//cookie
+
+app.use(cookieSession({
+  maxAge:24*60*60*1000, //a day in milliseconds
+  keys: [process.env.SESSION_SECRET]
+}))
+
+
 // Handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 var htmlroutes = require("./routes/htmlRoutes");
 var apiroutes = require("./routes/apiRoutes");
+var dashboardroutes = require("./routes/dashboardRoutes");
 
 app.use(htmlroutes);
 app.use(apiroutes);
+app.use("/dashboard", dashboardroutes);
 
 
 db.sequelize.sync().then(function() {
