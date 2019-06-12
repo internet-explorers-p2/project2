@@ -1,0 +1,41 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Add a goal</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="goal-name" class="col-form-label">Goal Name:</label>
+						<input type="text" class="form-control" id="goal-name">
+					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<input type="checkbox" aria-label="Checkbox for following text input" class="deadline">  Deadline<br>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group flex-nowrap">
+							<div class="input-group-prepend">
+								<label for="end-date" class="col-form-label">End date </label>
+								<span class="input-group-text" id="end-date"><i class="far fa-calendar-alt"></i></span>
+							</div>
+							<input type="date" class="form-control" placeholder="Start Date" aria-label="date"
+								aria-describedby="addon-wrapping">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				{{!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> --}}
+				<button type="button" class="btn btn-primary" id="form-save-goal-button">save</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
