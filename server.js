@@ -7,7 +7,8 @@ var db = require("./models");
 var app = express();
 // var Handlebars = require("handlebars");
 
-app.use(express.static("public"));
+// app.use(express.static(__dirname + "public"));
+app.use(express.static("."));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // app.get("/", (req,res) => {
