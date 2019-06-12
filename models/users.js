@@ -11,7 +11,8 @@ module.exports = function(sequelize, DataTypes){
 		},
 		isPremium: {
 			type: DataTypes.BOOLEAN,
-			allowNull: true
+			allowNull: false,
+			defaultValue: false
 		},
 		device: {
 			type: DataTypes.STRING,
