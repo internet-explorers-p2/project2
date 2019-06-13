@@ -1,17 +1,19 @@
 var router = require('express').Router();
-var authCheck = (req, res, next) => {
-    if(!req.user){
-        // if user is not logged in
-        res.redirect("/");
-    } else {
-        // if logged in
-        next();
+function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+      console.log("Youre authenticated");
+      console.log(req);
+      res.redirect('/dashboard')
+    } else{  
+        console.log("you are NOT authenticated");
+        console.log(req);
+        
+        res.redirect('/')
+
     }
-};
-
-
-router.get("/dashboard", authCheck, (req,res) => {
-    res.render("dashboard", {user: req.user})
-})
-
+    }
+  
+  router.get('/dashboard', ensureAuthenticated, function(req, res) {
+      res.render('dashboard')
+  });
 module.exports = router;

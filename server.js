@@ -37,7 +37,7 @@ var dashboardroutes = require("./routes/dashboardRoutes");
 
 app.use(htmlroutes);
 app.use(apiroutes);
-app.use("/dashboard", dashboardroutes);
+app.use(dashboardroutes);
 
 
 db.sequelize.sync().then(function() {
