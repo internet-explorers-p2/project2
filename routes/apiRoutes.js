@@ -43,6 +43,7 @@ require("../controllers/google-auth")
     // passport stuff will go here
 	req.logout();
 	res.redirect("/");
+	
   })
 
   // authentication with google
