@@ -1,6 +1,7 @@
 var db = require("../models")
 var express = require("express");
 var router = express.Router();
+var challenges = require('../public/js/challenge.js');
 
 // Load index page
 	router.get("/", function (req, res) {
@@ -11,7 +12,7 @@ var router = express.Router();
 	router.get("/dashboard", function(req, res) {
 		res.render("dashboard", {
 			username: "Im_a_fake_username",
-			challengeOfTheDay: "This_a_mock_challenge" 
+			challengeOfTheDay: challenges.dailyChallenge
 		})
 	})
 
