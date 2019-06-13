@@ -27,9 +27,6 @@ function checkAuthentication(req, res, next) {
 		res.render("index")
 	})
 
-<<<<<<< HEAD
-	// Render 404 page for any unmatched routes
-=======
 	//this is the dashboard route. Using mock data to pretend data is being sent from the backend to test handlebars
 	// router.get("/dashboard", ensureAuthenticated, function(req, res) {
 	// 	res.render("dashboard", {
@@ -55,7 +52,6 @@ function checkAuthentication(req, res, next) {
 	// })
 
 	// // Render 404 page for any unmatched routes
->>>>>>> 02e41f75dd61cd47494441277c9208dba227de77
 	// router.get("*", function (req, res) {
 	// 	res.render("404")
 	// })

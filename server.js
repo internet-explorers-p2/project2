@@ -42,11 +42,7 @@ var apiroutes = require("./routes/apiRoutes");
 
 app.use(htmlroutes);
 app.use(apiroutes);
-<<<<<<< HEAD
-app.use(dashboardroutes);
-=======
 // app.use(dashboardroutes);
->>>>>>> 02e41f75dd61cd47494441277c9208dba227de77
 
 
 db.sequelize.sync().then(function() {
