@@ -22,4 +22,3 @@ console.log (dailyChallenge);
 exports.dailyChallenge = dailyChallenge;
 
 
-// $("#challenge-title").append(dailyChallenge);
