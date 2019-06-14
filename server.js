@@ -24,9 +24,6 @@ app.use(cookieSession({
 app.use(express.static("."));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.get("/", (req,res) => {
-//   res.render("index")
-// })
 
 // Passport middleware
 app.use(passport.initialize())
@@ -50,13 +47,3 @@ db.sequelize.sync().then(function() {
     console.log("Server listening on: http://localhost:" + PORT);
   });
 });
-
-
-// // 
-// Handlebars.registerHelper("equals", function(string1 ,string2, options) {
-//   if (string1 === string2) {
-//       return options.fn(this);
-//   } else {
-//       return options.inverse(this);
-//   }
-// })

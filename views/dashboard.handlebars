@@ -2,7 +2,7 @@
   {{!-- Welcome row --}}
   <div class="row">
     <h1 id="welcome-sign">Welcome</h1> <span></span>
-    <h2 id="username-sign">{{username}}</h2>
+    <h2 id="username-sign">{{user.name}}</h2>
   </div>
   {{!-- /Welcome row --}}
 
@@ -21,7 +21,7 @@
       <div class="col-lg-6">
         <div class="accordion" id="accordionExample">
           {{#each GOAL_NAME_TABLE}}
-          {{> goal-accordion}}
+            {{> goal-accordion}}
           {{/each}}
         </div>
       </div>
