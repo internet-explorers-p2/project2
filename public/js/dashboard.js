@@ -5,6 +5,6 @@ $("#form-save-goal-button").on("click", ()=>{
     }
 
     $.post("/dashboard", goalInfo, (data) =>{
-        
     })
+    location.reload()
 })

@@ -2,11 +2,12 @@ var db = require("../models")
 var express = require("express");
 var router = express.Router();
 
-router.get("/dashboard", checkAuthentication, goals, function(req, res) {	
+router.get("/dashboard", checkAuthentication, getGoals, function(req, res) {	
 	let data = {
-		user: req.user.dataValues
-	}
-	console.log(req);
+		user: req.user.dataValues,
+		goals: res.locals.goals
+	}	
+	console.log(data.goals[0].dataValues);
 	
 	res.render("dashboard", data)
 });
@@ -19,17 +20,17 @@ function checkAuthentication(req, res, next) {
 		console.log("====REDIRECTING YOU====")
 }
 
-function goals(req, res, next){
+function getGoals(req, res, next){
 	let uid = req.user.id
 	
 	db.Goal.findAll({
 		where: {
 			UserId: uid,
 		}
-	}).then((data) =>{	
-		
+	}).then((data) =>{
+		res.locals.goals = data
+		return next()		
 	})
-	return next()
 }
 
 // Load index page

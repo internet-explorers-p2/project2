@@ -9,9 +9,8 @@ router.post("/dashboard", (req, res) => {
 
 	db.Goal.create(goalData).then((data)=>{
 		console.log("data added to db");
-		location.reload()
-	})
-		
+
+  })
 })
 
 
