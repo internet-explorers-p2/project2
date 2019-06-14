@@ -16,8 +16,6 @@ var router = express.Router();
 	})
 
 
-
-
 	// Load example page and pass in an example by id
 	router.get("/example/:id", function (req, res) {
 		db.Example.findOne({
