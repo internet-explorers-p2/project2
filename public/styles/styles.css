@@ -1,6 +1,18 @@
+* {
+  box-sizing: border-box
+}
+
+html {
+  display: block;
+  margin: 0 auto;
+  overflow: scroll;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
+
+
 /* INDEX HOME PAGE */
 #first-background {
   background-image: url("../images/backgroundone.png");
@@ -140,10 +152,16 @@
   margin: 10px;
   margin-right: 8px;
 }
+
 /* END OF INDEX */
 
 
 /* DASHBOARD.HANDLEBARS */
+
+#dashboard-container {
+  background: rgb(230, 229, 229);
+  background: linear-gradient(7deg, rgba(230, 229, 229, 1) 0%, rgba(252, 252, 252, 1) 47%, rgba(229, 229, 231, 1) 100%);
+}
 
 /* NAV */
 #nav-dash {
@@ -151,7 +169,8 @@
   color: white;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.24), -5px 0px 20px 5px rgba(0, 0, 0, 0.267);
 }
-#nav-item{
+
+#nav-item {
   margin: 1px 10px auto auto;
 }
 
@@ -166,6 +185,10 @@
 /* END OF NAV */
 
 /* WELCOME NAME OF USER */
+html, body{
+  height: 100%;
+}
+
 #welcome-sign {
   font-size: 20px;
   margin: 25px 8px 20px 60px;
@@ -181,6 +204,7 @@
 #add-goal-button {
   margin: 5px auto 20px 60px;
 }
+
 /* Accordion */
 .question {
   cursor: pointer;
@@ -192,11 +216,12 @@
   font-size: 35px;
   font-weight: bold;
 }
-hr{
+
+hr {
   width: 80%;
   /* border: 15px none; */
   border-width: 5px;
- margin: -15px auto -10px auto !important;
+  margin: -15px auto -10px auto !important;
 }
 
 #challenge-area {
@@ -247,12 +272,12 @@ hr{
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.container:hover input~.checkmark {
   background-color: white;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.container input:checked~.checkmark {
   background-color: teal;
 }
 
@@ -264,7 +289,7 @@ hr{
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.container input:checked~.checkmark:after {
   display: block;
 }
 
@@ -280,15 +305,25 @@ hr{
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 /* END OF CHECKBOX STYLE */
 
 
 
 /* FOOTER */
-footer{
-  display: inline-block;
+footer {
+  /* height: 50px; */
+  /* margin-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0; */
+  width: auto;
+  bottom: 0;
+  position: fixed;
+  left: 0;
 }
-#social-media-links{
+
+#social-media-links {
   margin-left: 30px;
   margin-bottom: 10px;
 }
@@ -303,30 +338,37 @@ footer{
   text-decoration: none;
   margin: 5px 4px 10px;
 }
+
 .fab:hover {
   opacity: 0.7;
 }
-.fa-github-square{
+
+.fa-github-square {
   background: rgb(129, 1, 129);
   color: white;
 }
+
 .fa-facebook-square {
   background: #3B5998;
   color: white;
 }
+
 .fa-twitter-square {
   background: #55ACEE;
   color: white;
 }
+
 .fa-instagram {
   background: #ea4c89;
   color: white;
-  /* margin-left: -2px; */
 }
-#copyright{
+
+#copyright {
   margin-left: 30%;
+  margin-bottom: 30px;
 }
-#about-terms{
+
+#about-terms {
   float: right;
-  margin-right: 30px;
+  margin-right: 45px;
 }
