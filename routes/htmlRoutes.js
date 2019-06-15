@@ -1,12 +1,16 @@
 var db = require("../models")
 var express = require("express");
 var router = express.Router();
-var challenges = require('../public/js/challenge.js');
+var dailyChallenge = require('../helpers/daily-challenge');
+
 
 router.get("/dashboard", checkAuthentication, function(req, res) {
 	res.render("dashboard", {
 		username: "Im_a_fake_username",
-		challengeOfTheDay: challenges.dailyChallenge 
+		challengeOfTheDay: dailyChallenge.title,
+		imageChallenge: dailyChallenge.image
+		
+		
 	})
 });
 function checkAuthentication(req, res, next) {
