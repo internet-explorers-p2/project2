@@ -20,3 +20,33 @@ var goalName = $("#")
     //     modal.find(".modal-title").text("New message to " + recipient)
     //     modal.find(".modal-body input").val(recipient)
     })
+
+    $(function() {
+        $( "#progressbar" ).progressbar({
+          value: 0
+        })
+        .data("value","0");
+        
+        $("#plus").click(function() {
+            var currValue = $( "#progressbar" ).data("value");
+            currValue = parseInt(currValue) ? parseInt(currValue) : 0;
+            if(currValue <= 100) {
+                $( "#progressbar" ).progressbar({
+                  value: currValue+10
+                }).data("value",currValue+10);
+                $("#progressLabel").html((currValue+10)+"%");
+            }    
+        });
+        
+        $("#minus").click(function() {
+            var currValue = $( "#progressbar" ).data("value");
+            currValue = parseInt(currValue) ? parseInt(currValue) : 0;
+            if(currValue > 0) {
+                $( "#progressbar" ).progressbar({
+                  value: currValue-10
+                }).data("value",currValue-10);
+                $("#progressLabel").html((currValue-10)+"%");
+            }    
+        });
+        
+      });

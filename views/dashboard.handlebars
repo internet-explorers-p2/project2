@@ -3,45 +3,40 @@
   <div class="row">
     <h1 id="welcome-sign">Welcome</h1> <span></span>
     <h2 id="username-sign">{{user.name}}</h2>
+    <div class="add-new-goal">
+      <button type="button" id="add-goal-button" class="btn btn-outline-dark" data-toggle="modal"
+        data-target="#exampleModal" data-whatever="goal">Add a goal</button>
+    </div>
   </div>
   {{!-- /Welcome row --}}
 
   {{!-- Content row --}}
-  <div class="row">
+  {{!-- <div class="row"> --}}
 
     {{!-- ADD A GOAL BUTTON --}}
 
-    <div class="add-new-goal">
-      <button type="button" id="add-goal-button" class="btn btn-outline-dark" data-toggle="modal"
-        data-target="#exampleModal" data-whatever="goal">Add a goal</button>
 
-      {{> add-goal-modal}}
+    {{> add-goal-modal}}
 
-      {{!-- Goals column --}}
-      <div class="col-lg-6">
-        <div class="accordion" id="accordionExample">
-          {{#each goals}}
-            {{> goal-accordion}}
-          {{/each}}
-        </div>
-      </div>
-      {{!-- /Goals column --}}
-
-      {{!-- Challenge of the day --}}
-
-
-      <div class="col-lg-4">
-        <div class="row justify-content-center" id="challenge-area">
-          <h2 id="challenge-title">Challenge of the day</h2>
-          <hr>
-          <div class="row" id="challenge-info">
-            <h4 id="daily-challenge">{{challengeOfTheDay}}</h4>
-            <label class="container">Complete <input type="checkbox"> <span class="checkmark"></span></label>
-          </div>
-        </div>
+    {{!-- Goals column --}}
+    <div class="row">
+    <div class="col-lg-6 overflow-auto">
+      <div class="accordion" id="accordionExample">
+        {{#each goals}}
+        {{> goal-accordion}}
+        {{/each}}
       </div>
     </div>
-  </div>
+    {{!-- /Goals column --}}
+
+    {{!-- Challenge of the day --}}
+
+
+    <div class="col-lg-4">
+      {{> challenge}}
+    </div>
+</div>
+  {{!-- </div> --}}
   <!-- footer -->
   <footer id="footer-dash">
     <div class="w-100 p-3 h-50 d-inline-block" id="social-media-links">
