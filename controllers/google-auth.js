@@ -1,6 +1,5 @@
 var passport = require("passport")
 var GoogleStrategy = require("passport-google-oauth").OAuth2Strategy
-var User = require("../models/users")
 var db = require("../models")
 
 passport.serializeUser((user,done) => {
