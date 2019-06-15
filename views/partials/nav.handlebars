@@ -1,32 +1,32 @@
 <nav id="nav-dash" class="navbar navbar-dark d-flex justify-content-end">
-  <div class="justify-content-start">
-    {{!-- LOGO --}}
-  <img id="nav-logo" src="assets/image/set-logo.png" alt="set">
-  </div>
-<ul class="nav d-flex justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
+  <div>
+    <div class="justify-content-start">
+      {{!-- LOGO --}}
+      <a href="/"><img id="nav-logo" src="../../public/images/set-logo.png" alt="set"></a>
+    
+    <ul class="nav d-flex justify-content-end">
+      <li class=""
+      <li class="nav-item">
+        <a class="nav-link active" href="/google">Sign in with Google</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Log out</a>
+      </li>
+      <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+      </div>
 
-<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
-</div>
-
-<!-- Page Content -->
-<div class="w3">
-  <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
-  <div class="w3-container">
+      <!-- Page Content -->
+      <div class="w3">
+        <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+        <div class="w3-container">
+        </div>
+      </div>
+    </ul>
   </div>
-</div>
-</div>
-</ul>
+  </div>
+
 </nav>
