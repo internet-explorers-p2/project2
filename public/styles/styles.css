@@ -175,6 +175,7 @@ body {
 #nav-logo {
   max-width: 8%;
   margin: 2px auto 2px 5px;
+  display: inline;
 }
 
 /* END OF NAV */
@@ -203,8 +204,9 @@ div.overflow-auto {
   overflow-y: scroll;
   margin-left: 70px;
 }
-
-
+#headingOne{
+  margin: -5px;
+}
 
 /* CHALLENGE OF THE DAY */
 #challenge-title {
