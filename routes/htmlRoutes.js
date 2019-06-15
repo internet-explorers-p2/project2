@@ -8,11 +8,13 @@ router.get("/dashboard", checkAuthentication, getGoals, function(req, res) {
 	let data = {
 		user: req.user.dataValues,
 		goals: res.locals.goals,
-		username: "Im_a_fake_username",
 		challengeOfTheDay: dailyChallenge.title,
 		imageChallenge: dailyChallenge.image
 
 	}	
+
+	console.log(res.locals.goals);
+	
 	
 	res.render("dashboard", data)
 });
