@@ -1,15 +1,12 @@
-* {
-  box-sizing: border-box
-}
-
 html {
-  display: block;
-  margin: 0 auto;
-  overflow: scroll;
+  height: 100%;
 }
 
-.list-group-item {
-  line-height: 2.5;
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
 }
 
 
@@ -21,7 +18,7 @@ html {
 }
 
 #third-background {
-  background-image: url("../images/gradient.png");
+  /* background-image: url("../images/gradient.png"); */
   background-size: 100%;
   background-repeat: no-repeat;
   height: 600px;
@@ -159,8 +156,9 @@ html {
 /* DASHBOARD.HANDLEBARS */
 
 #dashboard-container {
-  background: rgb(230, 229, 229);
-  background: linear-gradient(7deg, rgba(230, 229, 229, 1) 0%, rgba(252, 252, 252, 1) 47%, rgba(229, 229, 231, 1) 100%);
+  /* background: rgb(230, 229, 229); */
+  height: 100%;
+  /* background: linear-gradient(7deg, rgba(230, 229, 229, 1) 0%, rgba(252, 252, 252, 1) 47%, rgba(229, 229, 231, 1) 100%); */
 }
 
 /* NAV */
@@ -185,13 +183,11 @@ html {
 /* END OF NAV */
 
 /* WELCOME NAME OF USER */
-html, body{
-  height: 100%;
-}
+
 
 #welcome-sign {
   font-size: 20px;
-  margin: 25px 8px 20px 60px;
+  margin: 25px 8px 20px 80px;
 }
 
 #username-sign {
@@ -202,14 +198,18 @@ html, body{
 
 /* ADD NEW GOAL BUTTON */
 #add-goal-button {
-  margin: 5px auto 20px 60px;
+  margin: 25px auto 20px 40px;
 }
 
 /* Accordion */
-.question {
-  cursor: pointer;
-  color: red;
+div.overflow-auto {
+  height: 600px;
+  width: 900px;
+  overflow-y: scroll;
+  margin-left: 70px;
 }
+
+
 
 /* CHALLENGE OF THE DAY */
 #challenge-title {
@@ -221,28 +221,39 @@ hr {
   width: 80%;
   /* border: 15px none; */
   border-width: 5px;
-  margin: -15px auto -10px auto !important;
+  margin: -25px auto 15px auto !important;
 }
 
 #challenge-area {
   /* background: rgb(217,222,222); */
   background: white;
   width: 80%;
-  height: 200px;
+  height: 300px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.062);
-  margin: -25px 15px 15px auto;
+  margin: -45px 15px auto 120px;
 }
 
 #challenge-info {
-  margin-top: -25px;
+  margin-top: -15px;
+}
+
+#daily-challenge {
+  margin-left: 22%;
+  margin-top: -5%;
+}
+
+#image-challenge {
+  width: 50%;
+  height: auto;
+  margin-left: 24%;
 }
 
 /* CHECKBOX STYLE: from challenge of the day  */
 .container {
   display: block;
   position: relative;
-  padding-left: 25px;
+  padding-left: 175px;
   margin-bottom: 5px;
   cursor: pointer;
   font-size: 15px;
@@ -265,7 +276,7 @@ hr {
 .checkmark {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 150px;
   height: 18px;
   width: 18px;
   background-color: rgb(146, 145, 145);
@@ -311,16 +322,19 @@ hr {
 
 
 /* FOOTER */
-footer {
-  /* height: 50px; */
-  /* margin-bottom: 20px;
-  position: fixed;
+#footer-dash {
+  /* margin-top: 50px; */
+  position: absolute;
   bottom: 0;
-  right: 0; */
-  width: auto;
-  bottom: 0;
-  position: fixed;
+  width: 100%;
+  margin-bottom: -7%;
+}
+
+#footer-index {
+  text-align: center;
+  width: 100%;
   left: 0;
+  bottom: 0;
 }
 
 #social-media-links {
