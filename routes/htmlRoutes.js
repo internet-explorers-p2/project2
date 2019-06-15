@@ -6,9 +6,7 @@ router.get("/dashboard", checkAuthentication, getGoals, function(req, res) {
 	let data = {
 		user: req.user.dataValues,
 		goals: res.locals.goals
-	}	
-	console.log(data.goals[0].dataValues);
-	
+	}		
 	res.render("dashboard", data)
 });
 
