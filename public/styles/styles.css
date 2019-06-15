@@ -177,13 +177,9 @@ body {
   margin: 2px auto 2px 5px;
 }
 
-
-
-
 /* END OF NAV */
 
 /* WELCOME NAME OF USER */
-
 
 #welcome-sign {
   font-size: 20px;
@@ -194,7 +190,6 @@ body {
   font-size: 20px;
   margin-top: 25px;
 }
-
 
 /* ADD NEW GOAL BUTTON */
 #add-goal-button {
