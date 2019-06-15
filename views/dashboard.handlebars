@@ -1,39 +1,52 @@
-<div class="container-fluid">
+<div class="container-fluid" id="dashboard-container">
   {{!-- Welcome row --}}
   <div class="row">
     <h1 id="welcome-sign">Welcome</h1> <span></span>
     <h2 id="username-sign">{{user.name}}</h2>
+    <div class="add-new-goal">
+      <button type="button" id="add-goal-button" class="btn btn-outline-dark" data-toggle="modal"
+        data-target="#exampleModal" data-whatever="goal">Add a goal</button>
+    </div>
   </div>
   {{!-- /Welcome row --}}
 
   {{!-- Content row --}}
-  <div class="row">
+  {{!-- <div class="row"> --}}
 
     {{!-- ADD A GOAL BUTTON --}}
 
-    <div class="add-new-goal">
-      <button type="button" id="add-goal-button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal"
-        data-whatever="goal">Add a goal</button>
 
-      {{> add-goal-modal}}
+    {{> add-goal-modal}}
 
-      {{!-- Goals column --}}
-      <div class="col-lg-6">
-        <div class="accordion" id="accordionExample">
-          {{#each goals}}
-            {{> goal-accordion}}
-          {{/each}}
-        </div>
+    {{!-- Goals column --}}
+    <div class="row">
+    <div class="col-lg-6 overflow-auto">
+      <div class="accordion" id="accordionExample">
+        {{#each goals}}
+        {{> goal-accordion}}
+        {{/each}}
       </div>
-      {{!-- /Goals column --}}
-
-      {{!-- Challenge of the day --}}
-      <div class="col-lg-4">
-        {{> challenge}}
-      </div>
-      {{!-- /Challenge of the day --}}
-
     </div>
+    {{!-- /Goals column --}}
 
-    {{!-- /Container div --}}
-  </div>
+    {{!-- Challenge of the day --}}
+
+
+    <div class="col-lg-4">
+      {{> challenge}}
+    </div>
+</div>
+  {{!-- </div> --}}
+  <!-- footer -->
+  <footer id="footer-dash">
+    <div class="w-100 p-3 h-50 d-inline-block" id="social-media-links">
+      <a href="https://github.com/talktopri/project2" target="blank"><i class="fab fa-github-square"></i></a>
+      <a href="https://facebook.com/" target="blank"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://twitter.com/" target="blank"><i class="fab fa-twitter-square"></i></a>
+      <a href="https://instagram.com/" target="blank"><i class="fab fa-instagram"></i> </a>
+      <span id="copyright">copyright&copy; Set 2019 </span>
+      <div id="about-terms"><a href="" target="blank">About us </a> | <a href="" target="blank"> Terms and conditions
+        </a></span> </div>
+    </div>
+  </footer>
+</div>
