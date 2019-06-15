@@ -1,13 +1,18 @@
 var db = require("../models")
 var express = require("express");
 var router = express.Router();
+var dailyChallenge = require('../helpers/daily-challenge');
+
 
 router.get("/dashboard", checkAuthentication, getGoals, function(req, res) {	
 	let data = {
 		user: req.user.dataValues,
-		goals: res.locals.goals
+		goals: res.locals.goals,
+		username: "Im_a_fake_username",
+		challengeOfTheDay: dailyChallenge.title,
+		imageChallenge: dailyChallenge.image
+
 	}	
-	console.log(data.goals[0].dataValues);
 	
 	res.render("dashboard", data)
 });
