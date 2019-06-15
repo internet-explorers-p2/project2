@@ -4,30 +4,14 @@ var db = require("../models");
 const passport = require("passport");
 require("../controllers/google-auth")
 
+router.post("/dashboard", (req, res) => {
+	let goalData = req.body
 
-// module.exports = function(app) {
-	// Get all examples
-	router.get("/api/users", function(req, res) {
-    console.log("something");
-		db.User.findAll({}).then(function(users) {
-      
-			res.json(users)
-		})
-	})
+	db.Goal.create(goalData).then((data)=>{
+		console.log("data added to db");
 
-	// // Create a new example
-	// app.post("/api/examples", function(req, res) {
-	// 	db.Example.create(req.body).then(function(dbExample) {
-	// 		res.json(dbExample)
-	// 	})
-	// })
-
-	// // Delete an example by id
-	// app.delete("/api/examples/:id", function(req, res) {
-	// 	db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-	// 		res.json(dbExample)
-	// 	})
-	// })
+  })
+})
 
 
 
@@ -43,6 +27,7 @@ require("../controllers/google-auth")
     // passport stuff will go here
 	req.logout();
 	res.redirect("/");
+	
   })
 
   // authentication with google
@@ -53,32 +38,9 @@ require("../controllers/google-auth")
   //callback route for google to redirect to
   router.get("/google/redirect", passport.authenticate("google"),(req,res) => {
 	// res.send(req.user)
-	res.redirect("/dashboard/")
+	res.redirect("/dashboard")
   })
 // }
 // ========= AUTHENTICATION ENDS HERE ===============
-
-// module.exports = function(app) {
-//   // Get all examples
-//   app.get("/api/examples", function(req, res) {
-//     db.Example.findAll({}).then(function(dbExamples) {
-//       res.json(dbExamples);
-//     });
-//   });
-
-//   // Create a new example
-//   app.post("/api/examples", function(req, res) {
-//     db.Example.create(req.body).then(function(dbExample) {
-//       res.json(dbExample);
-//     });
-//   });
-
-//   // Delete an example by id
-//   app.delete("/api/examples/:id", function(req, res) {
-//     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-//       res.json(dbExample);
-//     });
-//   });
-// }
 
 module.exports = router;

@@ -1,17 +1,14 @@
+<div class="card mt-3">
+  <div class="card-header" id="headingOne">
+    <h2 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{dataValues.id}}" aria-expanded="true" aria-controls="collapse{{dataValues.id}}">
+      {{dataValues.title}}
+      </button>
+    </h2>
+  </div>
 
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#{{id}}" aria-expanded="true" aria-controls="{{id}}">
-        {{title}}
-        </button>
-      </h2>
-    </div>
-
-    <div id="{{id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-        {{> milestones}}
-      </div>
+  <div id="collapse{{dataValues.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+    <div class="card-body">
     </div>
   </div>
-  
+</div>

@@ -1,6 +1,5 @@
 var passport = require("passport")
 var GoogleStrategy = require("passport-google-oauth").OAuth2Strategy
-var User = require("../models/users")
 var db = require("../models")
 
 passport.serializeUser((user,done) => {
@@ -8,7 +7,7 @@ passport.serializeUser((user,done) => {
 })
 
 passport.deserializeUser((id,done) => {
-  db.User.findById(id).then((user) => {
+  db.User.findByPk(id).then((user) => {
     done(null,user);
   })
   
@@ -31,6 +30,7 @@ passport.use(new GoogleStrategy({
       }).then((currentUser) => {
       if(currentUser) {
       console.log("CURRENT USER IS: " + profile.displayName)
+      console.log(currentUser.id)
       done(null, currentUser)
       }else{
         var data = {
