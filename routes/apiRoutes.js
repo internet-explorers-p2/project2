@@ -5,9 +5,11 @@ const passport = require("passport");
 require("../controllers/google-auth")
 
 router.post("/dashboard", (req, res) => {
-	let goalData = req.body
+  let goalData = req.body
+  
 
 	db.Goal.create(goalData).then((data)=>{
+    console.log(goalData);
 		console.log("data added to db");
 
   })
