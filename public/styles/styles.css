@@ -14,13 +14,14 @@ body {
 #first-background {
   background-image: url("../images/background-long.png");
   background-size: 100%;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 
 #third-background {
-  /* background-image: url("../images/gradient-backgroung.png"); */
-  background-size: 75%;
-  background-repeat: no-repeat;
+  background: rgb(66,173,118);
+  background: linear-gradient(219deg, rgba(66, 173, 118, .8) 0%, rgba(49, 193, 203, .8) 100%);
+  /* background-size: 75%; */
+  /* background-repeat: no-repeat; */
   height: 550px;
   box-shadow: 0px 0px 5px 1px;
 }
@@ -54,21 +55,25 @@ body {
 .one {
   margin-right: 10px;
   margin-top: 80px;
+  color: darkslategray;
 }
 
 .two {
   margin-left: 5px;
   margin-top: 80px;
+  color: darkslategray;
 }
 
 .three {
   margin-left: 5px;
   margin-top: 80px;
+  color: darkslategray;
 }
 
 .four {
   margin-left: 5px;
   margin-top: 80px;
+  color: darkslategray;
 }
 
 #logo {
@@ -218,7 +223,11 @@ p{
 
 /* ADD NEW GOAL BUTTON */
 #add-goal-button {
-  margin: 25px auto 20px 40px;
+  margin: 25px auto 20px 25px;
+  background-color: rgb(112, 205, 227);
+  color: white;
+  border: none;
+  font-weight: bold;
 }
 
 /* Accordion */
@@ -230,6 +239,23 @@ p{
 }
 #headingOne{
   margin: 5px;
+  height: 65px;
+  background-color: rgb(183, 85, 202);
+  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.185);
+}
+.mt-3{
+  border: none;
+}
+.mb-0{
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+#goal-btn{
+  font-size: 20px;
+  /* font-weight: bold; */
+  margin-top: -30px;
+  color: white;
 }
 .card-body{
   height: 180px;
