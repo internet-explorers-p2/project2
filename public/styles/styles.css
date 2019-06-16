@@ -12,36 +12,57 @@ body {
 
 /* INDEX HOME PAGE */
 #first-background {
-  background-image: url("../images/backgroundone.png");
+  background-image: url("../images/background-long.png");
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 #third-background {
-  /* background-image: url("../images/gradient.png"); */
-  background-size: 100%;
+  /* background-image: url("../images/gradient-backgroung.png"); */
+  background-size: 75%;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 550px;
   box-shadow: 0px 0px 5px 1px;
 }
 
+#house{
+ width: 60%; 
+ height: auto;
+ margin: 20px auto 55px 35px;
+}
+#money{
+  width: 40%; 
+  height: auto;
+  margin: 20px auto 55px 55px;
+ }
+ #plane{
+  width: 40%; 
+  height: auto;
+  margin: 20px auto 55px 55px;
+ }
+ #weight{
+  width: 60%; 
+  height: auto;
+  margin: 40px auto 75px 45px;
+ }
+
 .one {
-  margin-right: 80px;
+  margin-right: 10px;
   margin-top: 80px;
 }
 
 .two {
-  margin-left: 50px;
+  margin-left: 5px;
   margin-top: 80px;
 }
 
 .three {
-  margin-left: 145px;
+  margin-left: 5px;
   margin-top: 80px;
 }
 
 .four {
-  margin-left: 120px;
+  margin-left: 5px;
   margin-top: 80px;
 }
 
@@ -66,89 +87,82 @@ p{
   padding: 10px;
   margin-top: -40px;
 }
-
-#basic-account-info {
-  padding: 2%;
-  width: 900px;
-  margin-top: 5%;
-  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.075), -5px 0px 20px 0 rgba(0, 0, 0, 0.027);
+.description {
+  background-color: rgba(255, 255, 255, 0.788);
+  border-radius: 10px 10px 10px 10px;
   height: 70%;
-  border-radius: 20px 0 0 20px;
+  margin-top: 10px;
 }
-
-#premium-account-area {
-  box-shadow: 0 3px 15px 1px;
-  /* z-index: 1; */
-  padding: 2%;
+#list{
+  list-style-type: none;
+  margin-top: 30px;
+  margin-left: 15px; 
+  padding: 10px;
+  color: darkslategray;
+}
+#list, li{
+  line-height: 30px;
+}
+#x{
+  width: 20px;
+  height: auto;
+  margin-right: 10px;
+}
+#checkmark{
+  width: 20px;
+  height: auto;
+  margin-right: 10px;
+}
+#basic-account-area {
+  width: 500px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-top: 5%;
-  box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.11);
+  margin: 60px;
+  background: rgb(100,141,223);
+  background: linear-gradient(114deg, rgba(100,141,223,1) 0%, rgba(151,181,242,1) 100%);
+  box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.226);
   height: 70%;
-}
-
-#deluxe-account-area {
-  padding: 2%;
-  width: 350px;
-  margin-top: 5%;
-  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.075), -5px 0px 20px 0 rgba(0, 0, 0, 0.027);
-  height: 70%;
-  border-radius: 20px;
-  border-radius: 0 20px 20px 0;
-}
-
-.price-heading {
-  margin: auto;
-  margin-bottom: 15%;
-  background-color: rgba(0, 0, 0, 0.082);
-  padding: none;
+  border-radius: 10px 10px 10px 10px;
 }
 
 #basic {
-  font-size: 70px;
+  font-size: 30px;
   font-weight: bold;
-  position: absolute;
+  margin: 20px auto 10px auto;
+  color: white;
 }
 
 #basic-account {
   position: relative;
-  padding-top: 32%;
+  color: white;
+}
+
+#premium-account-area {
+  width: 500px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 5%;
+  margin: 60px;
+  background: rgb(122,46,185);
+  background: linear-gradient(219deg, rgba(122,46,185,1) 0%, rgba(185,133,244,1) 100%);
+  box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.226);
+  height: 70%;
+  border-radius: 10px 10px 10px 10px;
 }
 
 #premium {
-  font-size: 70px;
+  font-size: 30px;
   font-weight: bold;
-  position: absolute;
+  margin: 20px auto 10px auto;
+  color: white;
 }
 
 #premium-account {
   position: relative;
+  color: white;
 }
 
-#premium-vertical {
-  writing-mode: vertical-rl;
-  text-orientation: sideways-right;
-  margin-left: 35%;
-  margin-top: 9%;
-  font-size: 20px;
-}
-
-#deluxe {
-  font-size: 70px;
-  font-weight: bold;
-  position: absolute;
-}
-
-#deluxe-account {
-  position: relative;
-  margin-top: 10%;
-}
-
-#deluxe-vertical {
-  writing-mode: vertical-rl;
-  text-orientation: sideways-right;
-  margin-left: 48%;
-  margin-top: 12%;
-  font-size: 20px;
-}
 
 .deadline {
   margin: 10px;
@@ -239,7 +253,7 @@ hr {
   height: 300px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.062);
-  margin: -45px 15px auto 120px;
+  margin: -45px 15px auto auto;
 }
 
 #challenge-info {
@@ -339,7 +353,6 @@ hr {
 }
 
 #footer-index {
-  text-align: center;
   width: 100%;
   left: 0;
   bottom: 0;
