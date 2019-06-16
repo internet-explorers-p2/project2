@@ -261,7 +261,10 @@ p{
   height: 180px;
   width: auto;
 }
-
+.progress-bar{
+  height: 2px;
+  color: rgb(112, 205, 227);
+}
 
 
 /* MILESTONE CHECKLIST */
@@ -271,18 +274,20 @@ p{
 
 #milestone-header {
 	font-size: 15px;
-    color: blue;
+    color: rgb(232, 80, 62);
    }
 
 #milestone-input {
   /* padding-top: 30px; */
   width:400px;
   height: 25px;
-  font-size: 15px;
-  border: 1px solid;
+  font-size: 13px;
+  border: 1px solid gray;
+  border-radius: 5px;
   margin-left: 10px;
   margin-bottom: -10px;
 }
+
 
 #milestone-input:focus {
   outline: none;
@@ -296,6 +301,7 @@ p{
   font-size: 15px;
   list-style: none;
   margin: 0;
+  list-style: circle;
 }
 
 #myLi:hover {
