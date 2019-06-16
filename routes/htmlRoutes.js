@@ -11,6 +11,9 @@ router.get("/dashboard", checkAuthentication, getGoals, function(req, res) {
 		challengeOfTheDay: dailyChallenge.title,
 		imageChallenge: dailyChallenge.image
 	}	
+
+	console.log(res.locals.goals);
+	
 	
 	res.render("dashboard", data)
 });

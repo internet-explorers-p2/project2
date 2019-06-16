@@ -12,37 +12,68 @@ body {
 
 /* INDEX HOME PAGE */
 #first-background {
-  background-image: url("../images/backgroundone.png");
+  background-image: url("../images/background-long.png");
+  z-index: -2;
   background-size: 100%;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 
 #third-background {
-  /* background-image: url("../images/gradient.png"); */
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 600px;
-  box-shadow: 0px 0px 5px 1px;
+  background: rgb(66,173,118);
+  background: linear-gradient(219deg, rgba(66, 173, 118, .8) 0%, rgba(49, 193, 203, .8) 100%);
+  /* background-size: 75%; */
+  /* background-repeat: no-repeat; */
+  height: 550px;
+  box-shadow: 0 0px 8px 5px rgba(0, 0, 0, 0.377);
+}
+.p, .text-center{
+  margin-bottom: 30px;
+  font-size: 20px;
 }
 
+#house{
+ width: 60%; 
+ height: auto;
+ margin: 8px auto 55px 35px;
+}
+#money{
+  width: 40%; 
+  height: auto;
+  margin: 10px auto 55px 55px;
+ }
+ #plane{
+  width: 40%; 
+  height: auto;
+  margin: 20px auto 55px 55px;
+ }
+ #weight{
+  width: 50%; 
+  height: auto;
+  margin: 115px auto 55px 45px;
+ }
+
 .one {
-  margin-right: 80px;
+  margin-right: 10px;
   margin-top: 80px;
+  color: darkslategray;
 }
 
 .two {
-  margin-left: 50px;
+  margin-left: 5px;
   margin-top: 80px;
+  color: darkslategray;
 }
 
 .three {
-  margin-left: 145px;
+  margin-left: 5px;
   margin-top: 80px;
+  color: darkslategray;
 }
 
 .four {
-  margin-left: 120px;
-  margin-top: 80px;
+  margin-left: 5px;
+  color: darkslategray;
+  /* margin-top: 60px; */
 }
 
 #logo {
@@ -54,96 +85,95 @@ body {
   height: 200px;
 }
 
-#second-background {
+/* #second-background {
   box-shadow: 0px 0px 2px 0px;
   height: 100%;
-  width: 100%;
-  background-image: url(../image);
+  width: 80%;
+  /* background-image: url(../image); */
   margin: auto;
+  padding: 60px;
+  z-index: 2px;
+} */
+p{
+  padding: 10px;
+  margin-top: -40px;
 }
-
-#basic-account-info {
-  padding: 2%;
-  width: 900px;
-  margin-top: 5%;
-  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.075), -5px 0px 20px 0 rgba(0, 0, 0, 0.027);
+.description {
+  background-color: rgba(255, 255, 255, 0.788);
+  border-radius: 10px 10px 10px 10px;
   height: 70%;
-  border-radius: 20px 0 0 20px;
+  margin-top: 10px;
 }
-
-#premium-account-area {
-  box-shadow: 0 3px 15px 1px;
-  /* z-index: 1; */
-  padding: 2%;
+#list{
+  list-style-type: none;
+  margin-top: 30px;
+  margin-left: 15px; 
+  padding: 10px;
+  color: darkslategray;
+}
+#list, li{
+  line-height: 30px;
+}
+#x{
+  width: 20px;
+  height: auto;
+  margin-right: 10px;
+}
+#checkmark{
+  width: 20px;
+  height: auto;
+  margin-right: 10px;
+}
+#basic-account-area {
+  width: 500px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-top: 5%;
-  box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.11);
+  margin: 60px;
+  background: rgb(100,141,223);
+  background: linear-gradient(114deg, rgba(100,141,223,1) 0%, rgba(151,181,242,1) 100%);
+  box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.226);
   height: 70%;
-}
-
-#deluxe-account-area {
-  padding: 2%;
-  width: 350px;
-  margin-top: 5%;
-  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.075), -5px 0px 20px 0 rgba(0, 0, 0, 0.027);
-  height: 70%;
-  border-radius: 20px;
-  border-radius: 0 20px 20px 0;
-}
-
-.price-heading {
-  margin: auto;
-  margin-bottom: 15%;
-  background-color: rgba(0, 0, 0, 0.082);
-  padding: none;
+  border-radius: 10px 10px 10px 10px;
 }
 
 #basic {
-  font-size: 70px;
+  font-size: 30px;
   font-weight: bold;
-  position: absolute;
+  margin: 20px auto 10px auto;
+  color: white;
 }
 
 #basic-account {
   position: relative;
-  padding-top: 32%;
+  color: white;
+}
+
+#premium-account-area {
+  width: 500px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 5%;
+  margin: 60px;
+  background: rgb(122,46,185);
+  background: linear-gradient(219deg, rgba(122,46,185,1) 0%, rgba(185,133,244,1) 100%);
+  box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.226);
+  height: 70%;
+  border-radius: 10px 10px 10px 10px;
 }
 
 #premium {
-  font-size: 70px;
+  font-size: 30px;
   font-weight: bold;
-  position: absolute;
+  margin: 20px auto 10px auto;
+  color: white;
 }
 
 #premium-account {
   position: relative;
+  color: white;
 }
 
-#premium-vertical {
-  writing-mode: vertical-rl;
-  text-orientation: sideways-right;
-  margin-left: 35%;
-  margin-top: 9%;
-  font-size: 20px;
-}
-
-#deluxe {
-  font-size: 70px;
-  font-weight: bold;
-  position: absolute;
-}
-
-#deluxe-account {
-  position: relative;
-  margin-top: 10%;
-}
-
-#deluxe-vertical {
-  writing-mode: vertical-rl;
-  text-orientation: sideways-right;
-  margin-left: 48%;
-  margin-top: 12%;
-  font-size: 20px;
-}
 
 .deadline {
   margin: 10px;
@@ -168,13 +198,14 @@ body {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.24), -5px 0px 20px 5px rgba(0, 0, 0, 0.267);
 }
 
-#nav-item {
-  margin: 1px 10px auto auto;
+#nav-link {
+  margin: 1px 50px auto auto;
 }
 
 #nav-logo {
   max-width: 8%;
-  margin: 2px auto 2px 5px;
+  margin: 2px auto 2px 55px;
+  display: inline;
 }
 
 /* END OF NAV */
@@ -193,18 +224,94 @@ body {
 
 /* ADD NEW GOAL BUTTON */
 #add-goal-button {
-  margin: 25px auto 20px 40px;
+  margin: 25px auto 20px 25px;
+  background-color: rgb(112, 205, 227);
+  box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.062);
+  color: white;
+  border: none;
+  font-weight: bold;
 }
 
 /* Accordion */
-div.overflow-auto {
+#overflow {
   height: 600px;
   width: 900px;
   overflow-y: scroll;
   margin-left: 70px;
 }
+#headingOne{
+  margin: 5px;
+  height: 65px;
+  background-color: rgb(183, 85, 202);
+  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.185);
+}
+.mt-3{
+  border: none;
+}
+.mb-0{
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+#goal-btn{
+  font-size: 20px;
+  /* font-weight: bold; */
+  margin-top: -30px;
+  color: white;
+}
+.card-body{
+  height: 180px;
+  width: auto;
+}
+.progress-bar{
+  height: 2px;
+  color: rgb(112, 205, 227);
+}
 
 
+/* MILESTONE CHECKLIST */
+#milestone-list{
+  margin-left: 15px;
+}
+
+#milestone-header {
+	font-size: 15px;
+    color: rgb(232, 80, 62);
+   }
+
+#milestone-input {
+  /* padding-top: 30px; */
+  width:400px;
+  height: 25px;
+  font-size: 13px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: -10px;
+}
+
+
+#milestone-input:focus {
+  outline: none;
+}
+#list{
+  margin-left: 12px;
+  margin-top: 5px;
+}
+#myLi {
+  text-align: left;
+  font-size: 15px;
+  list-style: none;
+  margin: 2px;
+  background-color: rgba(211, 211, 211, 0.514);
+  padding: 1px;
+}
+
+#myLi:hover {
+  text-decoration: line-through;
+}
+
+/* /////////////////////////////////// */
 
 /* CHALLENGE OF THE DAY */
 #challenge-title {
@@ -221,12 +328,12 @@ hr {
 
 #challenge-area {
   /* background: rgb(217,222,222); */
-  background: white;
+  background: rgba(60, 216, 156, 0.678);
   width: 80%;
   height: 300px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.062);
-  margin: -45px 15px auto 120px;
+  margin: 1px 15px auto auto;
 }
 
 #challenge-info {
@@ -242,6 +349,7 @@ hr {
   width: 50%;
   height: auto;
   margin-left: 24%;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.144);
 }
 
 /* CHECKBOX STYLE: from challenge of the day  */
@@ -326,7 +434,6 @@ hr {
 }
 
 #footer-index {
-  text-align: center;
   width: 100%;
   left: 0;
   bottom: 0;
