@@ -20,63 +20,31 @@ var goalName = $("#")
     //     modal.find(".modal-title").text("New message to " + recipient)
     //     modal.find(".modal-body input").val(recipient)
     });
-    
+
 
 // MILESTONE CHECKLIST: 
 
-    var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
+    function newItem() {
+  var item = document.getElementById("milestone-input").value;
+  var ul = document.getElementById("list");
   var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
+  
+	li.setAttribute("id", "myLi");
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
+  li.appendChild(document.createTextNode("- " + item));
+  ul.appendChild(li);
+  document.getElementById("milestone-input").value = "";
+  li.onclick = removeItem;
+}
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
+document.body.onkeyup = function(e) {
+  if (e.keyCode == 13) {
+    newItem();
   }
+};
+
+function removeItem(e) {
+  e.target.parentElement.removeChild(e.target);
 }
    
     
