@@ -222,7 +222,7 @@ p{
 }
 
 /* Accordion */
-.overflow-auto {
+#overflow {
   height: 600px;
   width: 900px;
   overflow-y: scroll;
@@ -239,6 +239,9 @@ p{
 
 
 /* MILESTONE CHECKLIST */
+#milestone-list{
+  margin-left: 15px;
+}
 
 #milestone-header {
 	font-size: 15px;
@@ -258,7 +261,10 @@ p{
 #milestone-input:focus {
   outline: none;
 }
-
+#list{
+  margin-left: 12px;
+  margin-top: 5px;
+}
 #myLi {
   text-align: left;
   font-size: 15px;
