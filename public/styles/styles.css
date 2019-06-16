@@ -236,8 +236,12 @@ p{
 #overflow {
   height: 600px;
   width: 900px;
-  overflow-y: scroll;
+  overflow-y: scroll;   
   margin-left: 70px;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 #headingOne{
   margin: 5px;
@@ -263,7 +267,7 @@ p{
   height: 180px;
   width: auto;
 }
-.progress-bar{
+.progress{
   height: 2px;
   color: rgb(112, 205, 227);
 }
@@ -272,6 +276,7 @@ p{
 /* MILESTONE CHECKLIST */
 #milestone-list{
   margin-left: 15px;
+  overflow-y: scroll;
 }
 
 #milestone-header {
@@ -333,7 +338,7 @@ hr {
   height: 300px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.062);
-  margin: 1px 15px auto auto;
+  margin: 1px 15px auto 180px;
 }
 
 #challenge-info {
@@ -349,6 +354,7 @@ hr {
   width: 50%;
   height: auto;
   margin-left: 24%;
+  border: solid 1px lightgray;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.144);
 }
 
