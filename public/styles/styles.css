@@ -47,7 +47,7 @@ body {
  #weight{
   width: 50%; 
   height: auto;
-  margin: 35px auto 75px 45px;
+  margin: 115px auto 55px 45px;
  }
 
 .one {
@@ -70,8 +70,8 @@ body {
 
 .four {
   margin-left: 5px;
-  margin-top: 60px;
   color: darkslategray;
+  /* margin-top: 60px; */
 }
 
 #logo {
