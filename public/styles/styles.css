@@ -13,6 +13,7 @@ body {
 /* INDEX HOME PAGE */
 #first-background {
   background-image: url("../images/background-long.png");
+  z-index: -2;
   background-size: 100%;
   /* background-repeat: no-repeat; */
 }
@@ -25,31 +26,28 @@ body {
   height: 550px;
   box-shadow: 0 0px 8px 5px rgba(0, 0, 0, 0.377);
 }
-#green-grad{
-  width: 100%;
-  height: auto;
-  z-index: -2;
-  margin-top: -25px;
+.p, .text-center{
+  margin-bottom: 30px;
 }
 #house{
  width: 60%; 
  height: auto;
- margin: 20px auto 55px 35px;
+ margin: 8px auto 55px 35px;
 }
 #money{
   width: 40%; 
   height: auto;
-  margin: 20px auto 55px 55px;
+  margin: 10px auto 55px 55px;
  }
  #plane{
   width: 40%; 
   height: auto;
-  margin: 30px auto 55px 55px;
+  margin: 20px auto 55px 55px;
  }
  #weight{
   width: 50%; 
   height: auto;
-  margin: 30px auto 75px 45px;
+  margin: 35px auto 75px 45px;
  }
 
 .one {
@@ -72,7 +70,7 @@ body {
 
 .four {
   margin-left: 5px;
-  margin-top: 80px;
+  margin-top: 60px;
   color: darkslategray;
 }
 
@@ -87,7 +85,7 @@ body {
 
 #second-background {
   box-shadow: 0px 0px 2px 0px;
-  height: 20%;
+  height: 100%;
   width: 80%;
   background-image: url(../image);
   margin: auto;
