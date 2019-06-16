@@ -16,8 +16,25 @@
 
     <div id="collapse{{dataValues.id}}" class="collapse show" aria-labelledby="headingOne"
       data-parent="#accordionExample">
-      <div class="card-body">
+      <div class="card-body overflow-auto">
         {{!-- {{> milestone-button}} --}}
+
+
+        {{!-- MILESTONE LIST --}}
+        <div id="myDIV" class="header">
+          <h2 style="margin:5px" id="milestone-heading">Add a Milestone</h2>
+          <input type="text" id="myInput" placeholder="Milestone...">
+          <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+
+        <ul id="myUL">
+          <li id="myLi">Hit the gym</li>
+          <li id="myLi" class="checked">Pay bills</li>
+          <li id="myLi">Meet George</li>
+          <li id="myLi">Buy eggs</li>
+          <li id="myLi">Read a book</li>
+          <li id="myLi">Organize office</li>
+        </ul>
 
         {{!-- <div id="progressbar"></div>
 
