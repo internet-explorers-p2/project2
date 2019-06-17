@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "setGoals_DB",
-    "host": "127.0.0.1",
+    "username": "n0nyb9swj6w73txz",
+    "password": "o906t5zft7fzk5ni",
+    "database": "xkjal05c4ca7s2qg",
+    "host": "u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
