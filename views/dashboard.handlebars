@@ -1,3 +1,4 @@
+{{> nav-dash}}
 <div class="container-fluid" id="dashboard-container">
   {{!-- Welcome row --}}
   <div class="row">
@@ -10,12 +11,22 @@
   </div>
   {{!-- /Welcome row --}}
 
+<<<<<<< HEAD
   {{!-- ADD A GOAL BUTTON --}}
   {{> add-goal-modal}}
   {{> add-milestone-modal}}
+=======
+  {{!-- Content row --}}
+  {{!-- <div class="row"> --}}
 
-  {{!-- Goals column --}}
-  <div class="row">
+    {{!-- ADD A GOAL BUTTON --}}
+
+
+    {{> add-goal-modal}}
+>>>>>>> 613e90fa27ef97ea89837688cbd7fd012ff71464
+
+    {{!-- Goals column --}}
+    <div class="row">
     <div class="col-lg-6 overflow-auto">
       <div class="accordion" id="accordionExample">
         {{#each goals}}
@@ -31,7 +42,12 @@
     <div class="col-lg-4">
       {{> challenge}}
     </div>
+<<<<<<< HEAD
   </div>
+=======
+</div>
+  {{!-- </div> --}}
+>>>>>>> 613e90fa27ef97ea89837688cbd7fd012ff71464
   <!-- footer -->
   <footer id="footer-dash">
     <div class="w-100 p-3 h-50 d-inline-block" id="social-media-links">

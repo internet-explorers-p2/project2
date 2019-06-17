@@ -35,7 +35,8 @@ passport.use(new GoogleStrategy({
       }else{
         var data = {
           name: profile.displayName,
-          googleID: profile.id
+          googleID: profile.id,
+          lastLogin: new Date()
         };
         db.User.create(data).then(function(newUser, created) {
           if (!newUser) {

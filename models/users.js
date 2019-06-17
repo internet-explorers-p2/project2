@@ -14,9 +14,8 @@ module.exports = function(sequelize, DataTypes){
 			allowNull: false,
 			defaultValue: false
 		},
-		device: {
-			type: DataTypes.STRING,
-			allowNull: true
+		lastLogin: {
+			type: DataTypes.DATE,
 		}
 	})
 
