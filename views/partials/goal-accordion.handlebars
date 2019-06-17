@@ -2,31 +2,28 @@
   <div class="card mt-3">
     <div class="card-header" id="headingOne">
       <h2 class="mb-0">
-        <button id="goal-btn" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{dataValues.id}}"
-          aria-expanded="true" aria-controls="collapse{{dataValues.id}}">
+        <button id="goal-btn" class="btn btn-link" type="button" data-toggle="collapse"
+          data-target="#collapse{{dataValues.id}}" aria-expanded="true" aria-controls="collapse{{dataValues.id}}">
           {{dataValues.title}}
         </button>
       </h2>
       {{!-- PROGRESS BAR --}}
-      <div class="progress" style="height: 2px;">
+      <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
           aria-valuemax="100"></div>
       </div>
     </div>
 
-    <div id="collapse{{dataValues.id}}" class="collapse" aria-labelledby="headingOne"
-      data-parent="#accordionExample">
+    <div id="collapse{{dataValues.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body overflow-auto">
         {{!-- {{> milestone-button}} --}}
 
 
         {{!-- MILESTONE LIST --}}
-        <div id="milestone-list">
-          <span h2 id="milestone-header">Add Milestones</h2><input id="milestone-input"
-              placeholder="Add Milestone - Hit enter"></span>
+        <div id="milestone-list" class="overflow-auto">
+          <span h2 id="milestone-header">Add Milestones</h2><input id="milestone-input" placeholder="Add Milestone - Hit enter"></span>
           <ul id="list"></ul>
         </div>
-
 
       </div>
     </div>

@@ -1,11 +1,12 @@
-<nav id="nav-dash" class="navbar navbar-dark d-flex justify-content-end">
+<nav id="nav-dash" class="navbar navbar-dark d-flex justify-content-end" ><img id="nav-img" src="/public/images/nav.png">
       {{!-- LOGO --}}
       <img id="nav-logo" src="../../public/images/set-logo.png" alt="set">
     
-    <ul class="nav d-flex justify-content-end">
+    <ul class="nav d-flex justify-content-end" id="nav-link-dash">
       <li class="nav-item">
+        <img src="/public/images/coin.png" id="coin-img">
       {{#if user}}
-        <h5>{{totalCoin}} Coins</h5>
+        <h5 id="coin-text">{{totalCoin}}</h5>
       {{else}}
         <a class="nav-link active" href="/google">Sign in with Google</a>
       {{/if}}
