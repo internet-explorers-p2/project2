@@ -11,19 +11,33 @@ body {
   font-family: 'Cuprum', sans-serif;
 }
 
+
+
 /* SUCCESS PAGE */
 #first-background-success {
   background-image: url("../images/background-long.png");
   z-index: -2;
   /* background-size: 150%; */
-  height: 960px
+  height: 1260px
   /* background-repeat: no-repeat; */
 }
 
-.confirmation {
-  position: fixed;
-  top: 600px;
-  left: 400px;
+#success-text {
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  display: block;
+  font-size: 18px;
+  text-align: center
+}
+
+#google-button-success {
+  height:60px; 
+  font-size: 15px;
+  margin-top: 20px;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
 }
 
 a:hover {
@@ -33,9 +47,9 @@ a:hover {
 #google-button {
   height:60px; 
   font-size: 15px;
-  position: fixed;
-  top: 650px;
-  left: 650px;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
 }
 
 #google-button-index {
@@ -55,6 +69,16 @@ a:hover {
 
 #paypal-button-index a:hover {
   color: darkblue;
+}
+
+#paypal-form {
+  background-color: #ffc106;
+  border: solid 1px #ffc106;
+}
+
+#paypal-input {
+  background-color: #ffc106;
+  border: solid 1px #ffc106;
 }
 
 /* INDEX HOME PAGE */
