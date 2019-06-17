@@ -94,9 +94,26 @@ function getAllCoin(req, res, next){
 	})
 }
 
+//====== WORK IN PROGRESS ======
+// function getPaid(req, res, next) {
+// 	//if payment is approved and the user is authenticated
+// 	if (res.state === "approved" && req.isAuthenticated ){
+// 		db.User.update {
+// 			isPremium: true
+// 		}
+// 		where uid = googleID
+// 	}
+// 	//update the users table where column = isPremium to true
+// 	//then, on the handlebars file only show challenge of the day and coins if the user is premium
+// }
+//====== WORK IN PROGRESS ======
+
 // Load index page
 	router.get("/", function (req, res) {
 		res.render("index")
-	})
+	});
+	// router.get("/pay", function (req, res) {
+	// 	res.redirect("/")
+	// });
 	
 module.exports=router;

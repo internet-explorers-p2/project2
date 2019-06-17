@@ -6,7 +6,8 @@ var PORT = process.env.PORT || 3000;
 var db = require("./models");
 var app = express();
 var cookieSession = require("cookie-session");
-// var Handlebars = require("handlebars");
+var paypal = require('paypal-rest-sdk');
+require("./controllers/paypal")
 
 //cookie
 app.use(cookieSession({
@@ -20,7 +21,6 @@ app.use(cookieSession({
   saveUninitialized: false
 }));
 
-// app.use(express.static(__dirname + "public"));
 app.use(express.static("."));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -33,15 +33,26 @@ app.use(passport.session())
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+//routes
 var htmlroutes = require("./routes/htmlRoutes");
 var apiroutes = require("./routes/apiRoutes");
-// var dashboardroutes = require("./routes/dashboardRoutes");
-
+var paypalroute = require("./controllers/paypal")
 app.use(htmlroutes);
 app.use(apiroutes);
-// app.use(dashboardroutes);
+app.use(paypalroute);
+
+//======== PayPal starts here ========//
+paypal.configure({
+  'mode': 'sandbox', //sandbox or live
+  client_id:process.env.PAYPAL_ID,
+  client_secret:process.env.PAYPAL_SECRET
+});
 
 
+// ============ PayPal ends here ======================= //
+
+
+//start the server and sync the database
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);

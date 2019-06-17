@@ -75,4 +75,8 @@ router.post("/daily-challenge", (req, res) => {
 // }
 // ========= AUTHENTICATION ENDS HERE ===============
 
+// router.get("/pay", (req, res) => {
+//   res.render("success")
+// })
+
 module.exports = router;

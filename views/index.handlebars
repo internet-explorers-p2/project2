@@ -62,8 +62,14 @@
             <li><img id="x" src="../public/images/x.png">blah</li>
             <li><img id="x" src="../public/images/x.png">Up to 5 goals</li>
             <li><img id="x" src="../public/images/x.png">blah</li>
+            
           </ul>
+            <button type="button" class="btn btn-dark btn-lg" id="google-button-index" href="/google">
+              <img src="../public/images/googleIcon.png" style="float:left;width:2.5em; height:2.5em; margin:0.2em 0.2em 0.2em -0.5em">
+              <a class="nav-link active" href="/google">Sign in with Google</a>
+            </button>
         </div>
+        
       </div>
 
       <div class="col-3 text-center" class id="premium-account-area">
@@ -78,9 +84,15 @@
             <li><img id="checkmark" src="../public/images/checkmark.png">Up to 5 goals</li>
             <li><img id="checkmark" src="../public/images/checkmark.png">blah</li>
           </ul>
+          {{!-- <button type="button" class="btn btn-warning btn-lg" id="paypal-button-index" href="/google">
+            <img src="../public/images/paypalIcon.png" style="float:left;width:2em; height:2em; margin-right:0.3em; margin-top:0.55em"> --}}
+            <form class="nav-link active" action="/pay" method="post">
+              <input type="submit" value="Pay with PayPal">
+              </form>
+          {{!-- </button> --}}
         </div>
       </div>
-
+    
     </div>
   </div>
 </div>
