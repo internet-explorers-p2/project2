@@ -2,17 +2,16 @@
     <h2 id="challenge-title">Challenge of the day</h2>
     <hr>
     <div class="row" id="challenge-info">
-        <h4 id="daily-challenge">{{challengeOfTheDay}}</h4>
-        <label class="container">Complete <input type="checkbox"> <span class="checkmark"></span></label>
+        <h4 id="daily-challenge">{{challengeOfTheDay.title}}</h4>
+        <label class="container">Complete 
+        {{#if challengeId}}
+            <input type="checkbox" class="checkbox" value={{challengeOfTheDay.id}} checked> <span class="checkmark"></span></label>
+        {{else}}
+            <input type="checkbox" class="checkbox" value={{challengeOfTheDay.id}} > <span class="checkmark"></span></label>
+        {{/if}}
         <div id="image-challenge-area">
-        <img id="image-challenge" src="{{imageChallenge}}">
+        <img id="image-challenge" src="{{challengeOfTheDay.image}}">
         </div>
-    </div>
-    <div class="row premium">
-        <p>Subscribe today and enjoy premium features!</p>
-        <form action="/pay" method="post">
-            <input type="submit" value="Pay with PayPal">
-        </form>
     </div>
 </div>
 
