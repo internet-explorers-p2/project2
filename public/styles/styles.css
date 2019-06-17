@@ -394,3 +394,19 @@ hr {
   float: right;
   margin-right: 45px;
 }
+.btn-transparent {
+  background: transparent;
+  color: rgb(0, 0, 0);
+  -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+  -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+  -o-transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+  .btn-transparent:hover {
+      color: rgb(0, 0, 0);
+      background-color: rgba(255,255,255,0.2);
+  }
+  .btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }

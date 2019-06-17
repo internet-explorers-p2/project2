@@ -4,7 +4,7 @@ var db = require("../models");
 const passport = require("passport");
 require("../controllers/google-auth")
 
-router.post("/dashboard", (req, res) => {
+router.post("/dashboard/goal", (req, res) => {
   let goalData = req.body
   
 
@@ -12,6 +12,17 @@ router.post("/dashboard", (req, res) => {
     console.log(goalData);
 		console.log("data added to db");
 
+  })
+})
+
+router.post("/dashboard/milestone", (req, res) =>{
+  let milestoneData = req.body
+
+  db.Milestone.create(milestoneData).then((data)=>{
+    console.log(milestoneData);
+    console.log("data added to db");
+
+    
   })
 })
 

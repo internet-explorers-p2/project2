@@ -12,7 +12,8 @@ module.exports = function(sequelize, DataTypes){
 		},
 		hasDeadline: {
 			type: DataTypes.BOOLEAN,
-			allowNull: false
+			allowNull: true,
+			defaultValue: false
 		},
 		deadline: {
 			type: DataTypes.STRING,
@@ -20,7 +21,8 @@ module.exports = function(sequelize, DataTypes){
 		},
 		completed: {
 			type: DataTypes.BOOLEAN,
-			allowNull: false
+			allowNull: false,
+			defaultValue: false
 		}
 	})
 

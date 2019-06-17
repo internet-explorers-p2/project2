@@ -8,3 +8,15 @@ $("#form-save-goal-button").on("click", ()=>{
     })
     location.reload()
 })
+
+$("#form-save-milestone-button").on("click", ()=>{
+    let milestoneInfo = {
+        GoalId : $(".milestone-btn").data("goalid"), 
+        title: $("#milestone-name").val()
+    }
+
+    $.post("/dashboard", milestoneInfo, (data) =>{
+    })
+    location.reload()
+})
+

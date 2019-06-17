@@ -1,22 +1,22 @@
 <div class="card mt-3">
   <div class="card-header" id="headingOne">
     <h2 class="mb-0">
-      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{dataValues.id}}"
+      <button class="btn btn-transparent" type="button" data-toggle="collapse" data-target="#collapse{{dataValues.id}}"
         aria-expanded="true" aria-controls="collapse{{dataValues.id}}">
         {{dataValues.title}}
       </button>
     </h2>
     {{!-- PROGRESS BAR --}}
-    <div class="progress" style="height: 2px;">
-      <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="40" aria-valuemin="0"
-        aria-valuemax="100"></div>
+    <div class="progress" style="height: 15px;">
+      <div class="progress-bar bg-success text-dark" role="progressbar" style="width: {{dataValues.progress}}%;" aria-valuenow="{{dataValues.progress}}" aria-valuemin="0"
+        aria-valuemax="100">{{dataValues.progress}}%</div>
     </div>
   </div>
 
   <div id="collapse{{dataValues.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
     <div class="card-body">
-      <button type="button" id="add-milestone-button" class="btn btn-outline-dark" data-toggle="modal"
-      data-target="#milestoneModal" data-whatever="milestone">Add a Milestone</button>
+      <button type="button" class="btn btn-outline-dark milestone-btn" data-toggle="modal"
+      data-target="#milestoneModal" data-goalid="{{dataValues.id}}">Add a Milestone</button>
     </div>
   </div>
 </div>
