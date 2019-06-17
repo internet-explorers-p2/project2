@@ -7,8 +7,11 @@ module.exports = function(sequelize, DataTypes){
 		amount: {
 			type: DataTypes.INTEGER,
 			allowNull: false
+		},
+		challengeId: {
+			type: DataTypes.INTEGER,
+			allowNull: true,
 		}
-
 	})
 	Token.associate = function(models){
 		Token.belongsTo(models.User)

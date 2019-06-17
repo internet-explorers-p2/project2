@@ -1,4 +1,4 @@
- {{> nav-dash}}
+{{> nav-dash}}
 <div class="container-fluid" id="dashboard-container">
   {{!-- Welcome row --}}
   <div class="row">
@@ -9,24 +9,34 @@
         data-target="#exampleModal" data-whatever="goal">Add a goal</button>
     </div>
   </div>
- 
-  {{> add-goal-modal}}
+  {{!-- /Welcome row --}}
 
-  {{!-- Goals column --}}
-  <div class="row">
-    <div class="col-lg-6 overflow-auto" id="overflow">
+  {{!-- Content row --}}
+  {{!-- <div class="row"> --}}
+
+    {{!-- ADD A GOAL BUTTON --}}
+
+
+    {{> add-goal-modal}}
+
+    {{!-- Goals column --}}
+    <div class="row">
+    <div class="col-lg-6 overflow-auto">
       <div class="accordion" id="accordionExample">
         {{#each goals}}
         {{> goal-accordion}}
         {{/each}}
       </div>
     </div>
+    {{!-- /Goals column --}}
+
+    {{!-- Challenge of the day --}}
+
 
     <div class="col-lg-4">
       {{> challenge}}
     </div>
-  </div>
-
+</div>
   {{!-- </div> --}}
   <!-- footer -->
   <footer id="footer-dash">
