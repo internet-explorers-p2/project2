@@ -9,7 +9,6 @@ $("#form-save-goal-button").on("click", ()=>{
     location.reload()
 })
 
-<<<<<<< HEAD
 $("#form-save-milestone-button").on("click", ()=>{
     let milestoneInfo = {
         GoalId : $(".milestone-btn").data("goalid"), 
@@ -20,7 +19,6 @@ $("#form-save-milestone-button").on("click", ()=>{
     })
     location.reload()
 })
-=======
 $('.checkbox').on('change', (event) => {
     
     challengeId = event.target.value
@@ -43,5 +41,4 @@ $('.checkbox').on('change', (event) => {
         window.location.reload(true);
      }
  })
->>>>>>> 613e90fa27ef97ea89837688cbd7fd012ff71464
 
