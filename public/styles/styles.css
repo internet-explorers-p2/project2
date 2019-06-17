@@ -9,6 +9,51 @@ body {
   padding: 0;
 }
 
+/* SUCCESS PAGE */
+#first-background-success {
+  background-image: url("../images/background-long.png");
+  z-index: -2;
+  /* background-size: 150%; */
+  height: 960px
+  /* background-repeat: no-repeat; */
+}
+
+.confirmation {
+  position: fixed;
+  top: 600px;
+  left: 400px;
+}
+
+a:hover {
+  color: lightskyblue;
+}
+
+#google-button {
+  height:60px; 
+  font-size: 15px;
+  position: fixed;
+  top: 650px;
+  left: 650px;
+}
+
+#google-button-index {
+  height:60px; 
+  font-size: 15px;
+  margin-left: 40px;
+  /* position: fixed;
+  top: 650px;
+  left: 650px; */
+}
+
+#paypal-button-index  {
+  height:60px; 
+  font-size: 15px;
+  margin-left: 50px;
+}
+
+#paypal-button-index a:hover {
+  color: darkblue;
+}
 
 /* INDEX HOME PAGE */
 #first-background {
