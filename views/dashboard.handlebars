@@ -12,11 +12,9 @@
  
   {{> add-goal-modal}}
 
-<div class="container" id="dash-div">
-
   {{!-- Goals column --}}
-  <div class="row">
-    <div class="col-lg-6 overflow-auto" id="overflow">
+  <div class="row" id="goal-area">
+    <div class="col-lg-6 overflow-auto">
       <div class="accordion" id="accordionExample">
         {{#each goals}}
         {{> goal-accordion}}
@@ -28,8 +26,8 @@
       {{> challenge}}
     </div>
   </div>
-</div>
-  {{!-- </div> --}}
+
+  </div>
   <!-- footer -->
   <footer id="footer-dash">
     <div class="w-100 p-3 h-50 d-inline-block" id="social-media-links">

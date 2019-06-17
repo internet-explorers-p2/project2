@@ -19,38 +19,43 @@ body {
 }
 
 #third-background {
-  background: rgb(66,173,118);
+  background: rgb(66, 173, 118);
   background: linear-gradient(219deg, rgba(66, 173, 118, .8) 0%, rgba(49, 193, 203, .8) 100%);
   /* background-size: 75%; */
   /* background-repeat: no-repeat; */
   height: 550px;
   box-shadow: 0 0px 8px 5px rgba(0, 0, 0, 0.377);
 }
-.p, .text-center{
+
+.p,
+.text-center {
   margin-bottom: 30px;
   font-size: 20px;
 }
 
-#house{
- width: 60%; 
- height: auto;
- margin: 8px auto 55px 35px;
+#house {
+  width: 60%;
+  height: auto;
+  margin: 8px auto 55px 35px;
 }
-#money{
-  width: 40%; 
+
+#money {
+  width: 40%;
   height: auto;
   margin: 10px auto 55px 55px;
- }
- #plane{
-  width: 40%; 
+}
+
+#plane {
+  width: 40%;
   height: auto;
   margin: 20px auto 55px 55px;
- }
- #weight{
-  width: 50%; 
+}
+
+#weight {
+  width: 50%;
   height: auto;
   margin: 115px auto 55px 45px;
- }
+}
 
 .one {
   margin-right: 10px;
@@ -90,48 +95,56 @@ body {
   height: 100%;
   width: 80%;
   /* background-image: url(../image); */
-  margin: auto;
+/* margin: auto;
   padding: 60px;
   z-index: 2px;
-} */
-p{
+}  */
+
+p {
   padding: 10px;
   margin-top: -40px;
 }
+
 .description {
   background-color: rgba(255, 255, 255, 0.788);
   border-radius: 10px 10px 10px 10px;
   height: 70%;
   margin-top: 10px;
 }
-#list{
+
+#list {
   list-style-type: none;
   margin-top: 30px;
-  margin-left: 15px; 
+  margin-left: 15px;
   padding: 10px;
   color: darkslategray;
 }
-#list, li{
+
+#list,
+li {
   line-height: 30px;
 }
-#x{
+
+#x {
   width: 20px;
   height: auto;
   margin-right: 10px;
 }
-#checkmark{
+
+#checkmark {
   width: 20px;
   height: auto;
   margin-right: 10px;
 }
+
 #basic-account-area {
   width: 500px;
   padding-left: 25px;
   padding-right: 25px;
   margin-top: 5%;
   margin: 60px;
-  background: rgb(100,141,223);
-  background: linear-gradient(114deg, rgba(100,141,223,1) 0%, rgba(151,181,242,1) 100%);
+  background: rgb(100, 141, 223);
+  background: linear-gradient(114deg, rgba(100, 141, 223, 1) 0%, rgba(151, 181, 242, 1) 100%);
   box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.226);
   height: 70%;
   border-radius: 10px 10px 10px 10px;
@@ -155,8 +168,8 @@ p{
   padding-right: 25px;
   margin-top: 5%;
   margin: 60px;
-  background: rgb(122,46,185);
-  background: linear-gradient(219deg, rgba(122,46,185,1) 0%, rgba(185,133,244,1) 100%);
+  background: rgb(122, 46, 185);
+  background: linear-gradient(219deg, rgba(122, 46, 185, 1) 0%, rgba(185, 133, 244, 1) 100%);
   box-shadow: 0 0px 8px 2px rgba(0, 0, 0, 0.226);
   height: 70%;
   border-radius: 10px 10px 10px 10px;
@@ -189,6 +202,13 @@ p{
   /* background: rgb(230, 229, 229); */
   height: 100%;
   /* background: linear-gradient(7deg, rgba(230, 229, 229, 1) 0%, rgba(252, 252, 252, 1) 47%, rgba(229, 229, 231, 1) 100%); */
+}
+
+#dash-div {
+  padding: 30px;
+  margin: 20px;
+  width: 80%;
+  border-radius: 30px;
 }
 
 /* NAV */
@@ -233,60 +253,74 @@ p{
 }
 
 /* Accordion */
+#goal-area{
+  margin-left: 50px;
+}
+
 #overflow {
   height: 600px;
   width: 900px;
-  overflow-y: scroll;   
+  overflow-y: scroll;
   margin-left: 70px;
 }
+
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background: transparent;
+  /* make scrollbar transparent */
 }
-#headingOne{
+
+#headingOne {
   margin: 5px;
   height: 65px;
-  background-color: rgb(183, 85, 202);
+  border-radius: 5px;
+  background: rgb(163, 53, 185);
+  background: linear-gradient(122deg, rgba(163, 53, 185, 1) 18%, rgba(224, 141, 240, 1) 100%);
   box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.185);
 }
-.mt-3{
+
+.mt-3 {
   border: none;
 }
-.mb-0{
+
+.mb-0 {
   font-size: 25px;
   font-weight: bold;
   margin-top: 10px;
 }
-#goal-btn{
+
+#goal-btn {
   font-size: 20px;
   /* font-weight: bold; */
   margin-top: -30px;
   color: white;
 }
-.card-body{
+
+.card-body {
   height: 180px;
   width: auto;
 }
-.progress{
+
+.progress {
   height: 2px;
   color: rgb(112, 205, 227);
 }
 
 
 /* MILESTONE CHECKLIST */
-#milestone-list{
+#milestone-list {
   margin-left: 15px;
   overflow-y: scroll;
 }
 
 #milestone-header {
-	font-size: 15px;
-    color: rgb(232, 80, 62);
-   }
+  font-size: 15px;
+  color: rgb(232, 80, 62);
+}
 
 #milestone-input {
   /* padding-top: 30px; */
-  width:400px;
+  width: 400px;
   height: 25px;
   font-size: 13px;
   border: 1px solid gray;
@@ -299,10 +333,12 @@ p{
 #milestone-input:focus {
   outline: none;
 }
-#list{
+
+#list {
   margin-left: 12px;
   margin-top: 5px;
 }
+
 #myLi {
   text-align: left;
   font-size: 15px;
@@ -333,12 +369,13 @@ hr {
 
 #challenge-area {
   /* background: rgb(217,222,222); */
-  background: rgba(60, 216, 156, 0.678);
+  background: rgb(0, 193, 140);
+  background: linear-gradient(219deg, rgba(0, 193, 140, 1) 0%, rgba(179, 230, 216, 1) 100%);
   width: 80%;
   height: 300px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.062);
-  margin: 1px 15px auto 180px;
+  margin: 15px 15px auto 180px;
 }
 
 #challenge-info {
