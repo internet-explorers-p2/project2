@@ -25,7 +25,7 @@ https://set-goals.herokuapp.com/
 
 **Group Team:**
 
-- Priscilla Heller: https://github.com/talktopri
+- Priscila Heller: https://github.com/talktopri
 - Jose Velazquez: https://github.com/josevelaz
 - Terena Blasberg: https://github.com/tblasberg
 - Ileana Mandigo: https://github.com/ilyrodriguez
